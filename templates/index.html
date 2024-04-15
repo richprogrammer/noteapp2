@@ -8,9 +8,9 @@
     <h1>Notes</h1>
     <br /><br />
     <form method='POST'></form>
-    <div class="form-floating">
-        <textarea class="form-control" name='noteInp' placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">Comments</label>
-      </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">Enter Note</span>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
 </center>
 {% endblock %}
