@@ -4,8 +4,13 @@ from flask import Flask, render_template, request, url_for
 app = Flask(__name__)
 
 #Creating the main page
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def main():
+    if request.method == "POST":
+        webpage = request.form
+        notes_inp = str(webpage['notesInp'])
+        print(notes_inp)
+
     return render_template("index.html")
 
 #Running the app
