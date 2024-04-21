@@ -12,5 +12,9 @@
       <span class="input-group-text" id="addon-wrapping">Enter Note</span>
       <input name='notesInp' type="text" class="form-control" placeholder="Enter Note" aria-label="Username" aria-describedby="addon-wrapping">
     </div>
+    <br />
+    {% for note in notes_list %}
+    <h5>{{ note }}</h5>
+    {% endfor %}
 </center>
 {% endblock %}
