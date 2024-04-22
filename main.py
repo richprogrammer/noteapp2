@@ -17,7 +17,7 @@ def main():
         print(notes_inp)
         notes_list.append(notes_inp)
 
-    return render_template("index.html")
+    return render_template("index.html", notes_list=notes_list)
 
 #Running the app
 if __name__ == '__main__':
