@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 #Global Variables
 notes_list = []
+temp_notes_list = []
 
 #Creating the main page
 @app.route("/", methods=["GET", "POST"])
@@ -14,8 +15,8 @@ def main():
     if request.method == "POST":
         webpage = request.form
         notes_inp = str(webpage['notesInp'])
-        print(notes_inp)
-        notes_list.append(notes_inp)
+        temp_notes_list.append(notes_inp)
+        [notes_list.append(x) for x in temp_notes_list if x not in notes_list]
 
     return render_template("index.html", notes_list=notes_list)
 
