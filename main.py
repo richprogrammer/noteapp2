@@ -17,12 +17,13 @@ def main():
 
     if request.method == "POST":
         webpage = request.form
+        print(webpage)
         notes_inp = str(webpage['notesInp'])
-        notes_title_inp = str(webpage['notesTitleInp'])
-        temp_notes_list.append(notes_inp)
-        temp_notes_list_title.append(notes_title_inp)
+        # notes_title_inp = str(webpage['notesTitleInp'])
+        # temp_notes_list.append(notes_inp)
+        # temp_notes_list_title.append(notes_title_inp)
         [notes_list.append(x) for x in temp_notes_list if x not in notes_list]
-        [notes_list_title.append(x) for x in temp_notes_list_title if x not in notes_list_title]
+        # [notes_list_title.append(x) for x in temp_notes_list_title if x not in notes_list_title]
 
         final_list = list(zip(notes_list_title, notes_list))
 
