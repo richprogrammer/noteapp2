@@ -18,9 +18,9 @@ def main():
     if request.method == "POST":
         webpage = request.form
         print(webpage)
-        notes_inp = str(webpage['notesInp'])
-        temp_notes_list.append(notes_inp)
-        [notes_list.append(x) for x in temp_notes_list if x not in notes_list]
+        # notes_inp = str(webpage['notesInp'])
+        # temp_notes_list.append(notes_inp)
+        # [notes_list.append(x) for x in temp_notes_list if x not in notes_list]
         
         #final_list = list(zip(notes_list_title, notes_list))
 
