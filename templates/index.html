@@ -18,7 +18,12 @@
     </form>
     <br />
     {% for note in notes_list %}
-    <h5>{{ note }}</h5>
+    <div class="note">
+      <h5>{{ note }}</h5>
+      <br />
+      <hr />
+    </div>
+    
     {% endfor %}
 </center>
 {% endblock %}
